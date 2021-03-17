@@ -1,0 +1,15 @@
+{
+  "workers": 20,
+  "walks_filename": "data/random_walks-tax.txt",
+  "dim": 64,
+  "lr": 0.05,
+  "lrUpdateRate": 100,
+  "min_count": 10,
+  "walk_type": "tax",
+  "termlist_path": "data/graph-header-data-terms.txt",
+  "edgelist_path": "data/graph-header-data-edges.txt",
+  "graph_type": "weighted_graph",
+  "number_walks": 50,
+  "weight_limit": 0,
+  "walk_length": 25
+}

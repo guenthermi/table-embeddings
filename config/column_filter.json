@@ -1,0 +1,11 @@
+{
+  "dump_paths": ["data/english_dump.json.gz"],
+  "output_file": "data/column_dump.json.gz",
+  "lang_filter": "en",
+  "min_text_value_size": 1,
+  "max_text_value_size": 1000,
+  "min_col_size": 2,
+  "max_size": "inf",
+  "numbers": true,
+  "special_signs": true
+}

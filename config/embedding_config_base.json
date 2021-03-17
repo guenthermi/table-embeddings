@@ -1,0 +1,13 @@
+{
+  "workers": 20,
+  "walks_filename": "data/random_walks-row.txt",
+  "dim": 64,
+  "lr": 0.05,
+  "lrUpdateRate": 100,
+  "min_count": 10,
+  "walk_type": "base",
+  "min_columns": 5,
+  "max_rows": "inf",
+  "dump_path": "data/english_dump.json.gz",
+  "lang_filter": "en"
+}

@@ -1,0 +1,6 @@
+{
+	"source_dump": "dwtc/",
+	"output_file": "data/english_dump.json.gz",
+	"dump_type": "english-dump",
+	"min_row_count": 2
+}

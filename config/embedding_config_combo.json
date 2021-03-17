@@ -1,0 +1,19 @@
+{
+  "workers": 20,
+  "walks_filename": "data/random_walks-combo.txt",
+  "dim": 64,
+  "lr": 0.05,
+  "lrUpdateRate": 100,
+  "min_count": 10,
+  "walk_type": "tax",
+  "termlist_path": "data/graph-header-data-terms.txt",
+  "edgelist_path": "data/graph-header-data-edges.txt",
+  "graph_type": "weighted_graph",
+  "number_walks": 50,
+  "weight_limit": 0,
+  "walk_length": 25,
+  "min_columns": 5,
+  "max_rows": "inf",
+  "dump_path": "data/english_dump.json.gz",
+  "lang_filter": "en"
+}
