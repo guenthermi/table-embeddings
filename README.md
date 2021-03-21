@@ -61,7 +61,7 @@ Below you can find links to models trained on the DWTC corpus:
 | W-tax      | Model of relations between table header and table body | ([64dim](https://wwwdb.inf.tu-dresden.de/misc/web-table-embeddings/web_table_embeddings_tax64.bin.gz), [150dim](https://wwwdb.inf.tu-dresden.de/misc/web-table-embeddings/web_table_embeddings_tax150.bin.gz))
 | W-row      | Model of row-wise relations in tables | ([64dim](https://wwwdb.inf.tu-dresden.de/misc/web-table-embeddings/web_table_embeddings_row64.bin.gz), [150dim](https://wwwdb.inf.tu-dresden.de/misc/web-table-embeddings/web_table_embeddings_row150.bin.gz))
 | W-combo      | Model of row-wise relations and relations between table header and table body | ([64dim](https://wwwdb.inf.tu-dresden.de/misc/web-table-embeddings/web_table_embeddings_combo64.bin.gz), [150dim](https://wwwdb.inf.tu-dresden.de/misc/web-table-embeddings/web_table_embeddings_combo150.bin.gz))
-| W-base      | Model of row-wise relations in tables without pre-processing | ([64dim](https://wwwdb.inf.tu-dresden.de/misc/web-table-embeddings/web_table_embeddings_base64.bin.gz), [150dim](https://wwwdb.inf.tu-dresden.de/misc/web-table-embeddings/web_table_embeddings_base150.bin.gz))
+| W-plain      | Model of row-wise relations in tables without pre-processing | ([64dim](https://wwwdb.inf.tu-dresden.de/misc/web-table-embeddings/web_table_embeddings_plain64.bin.gz), [150dim](https://wwwdb.inf.tu-dresden.de/misc/web-table-embeddings/web_table_embeddings_plain150.bin.gz))
 
 To use the models, you can use the `FastTextWebTableModel.load_model` function in `embedding/fasttext_web_table_embeddings.py`.
 
