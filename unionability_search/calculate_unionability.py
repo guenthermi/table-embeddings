@@ -7,7 +7,6 @@ from dataset_loader import DatasetLoader
 
 from web_table_embedding_model import WebTableEmbeddingModel
 from fasttext_embedding_model import FasttextEmbeddingModel
-from bert_embedding_model import BertEmbeddingModel
 from tapas_embedding_model import TapasEmbeddingModel
 
 
