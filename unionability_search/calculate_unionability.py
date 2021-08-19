@@ -1,10 +1,14 @@
+import numpy as np
 import json
 import random
+from turl_embedding_model import TurlEmbeddingModel
 from argparse import ArgumentParser, FileType, ArgumentDefaultsHelpFormatter
+from dataset_loader import DatasetLoader
 
 from web_table_embedding_model import WebTableEmbeddingModel
 from fasttext_embedding_model import FasttextEmbeddingModel
-from dataset_loader import DatasetLoader
+from bert_embedding_model import BertEmbeddingModel
+from tapas_embedding_model import TapasEmbeddingModel
 
 
 def create_arg_parser():
@@ -37,6 +41,10 @@ def load_embedding_model(model_type, model_path):
         model = WebTableEmbeddingModel(model_path)
     elif model_type == 'fasttext':
         model = FasttextEmbeddingModel(model_path)
+    elif model_type == 'tapas':
+        model = TapasEmbeddingModel(model_path)
+    elif model_type == 'turl':
+        model = TurlEmbeddingModel()
     return model
 
 
