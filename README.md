@@ -75,3 +75,15 @@ Besides the embedding training, this repository contains the code of four evalua
 * Spreadsheet cell classification (`deco_classifier/`)
 
 A detailed description, how to run the evaluation, is provided in the respective folders.
+
+## References
+[Pre-Trained Web Table Embeddings for Table Discovery](https://dl.acm.org/doi/10.1145/3464509.3464892)
+```
+@inproceedings{gunther2021pre,
+  title={Pre-Trained Web Table Embeddings for Table Discovery},
+  author={G{\"u}nther, Michael and Thiele, Maik and Gonsior, Julius and Lehner, Wolfgang},
+  booktitle={Fourth Workshop in Exploiting AI Techniques for Data Management},
+  pages={24--31},
+  year={2021}
+}
+```
