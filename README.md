@@ -4,6 +4,29 @@ This repository contains tools for training Web table embedding with word embedd
 Those models can generate embeddings for schema terms and instance data terms making them especially useful for representing schema and class information as well as for ML tasks on tabular text data.
 Furthermore, this repository contains links to pre-trained web table models and the code for several tasks the models can be used for.
 
+## Install Package
+
+If you want to install the package to encode text (from tables) into embedding representations, you can run
+
+```
+pip install .
+```
+
+and load a pre-trained model as follows:
+
+```
+from table_embeddings import TableEmbeddingModel
+model = TableEmbeddingModel.load_model('ddrg/web_table_embeddings_combo64')
+
+embedding = model.get_header_vector('headline')
+```
+
+For installing all dependencies to run the evaluation tasks you can run:
+
+```
+pip install ".[full]"
+```
+
 ## Embedding Training
 
 This repository provides tools for training four different types of Web table embedding models: *W-base*, *W-row*, *W-tax*, and *W-combo*.
