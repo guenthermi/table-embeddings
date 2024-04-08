@@ -1,4 +1,3 @@
-
 import sys
 import os
 import re
@@ -6,9 +5,9 @@ import json
 import gzip
 import math
 import random
-import importlib
+import importlib.util
 import numpy as np
-import networkx as nx
+from pathlib import Path
 from collections import defaultdict
 from whatthelang import WhatTheLang
 
@@ -19,7 +18,10 @@ if importlib.util.find_spec('fastText') != None:
 else:
     import fasttext as fastText
 
-import utils
+if __name__ == "__main__":
+    import utils
+else:
+    from embedding import utils
 
 
 class FastTextWebTableModel:
@@ -50,7 +52,17 @@ class FastTextWebTableModel:
 
     @staticmethod
     def load_model(filename):
-        model = FastTextWebTableModel(model=fastText.load_model(filename))
+        if os.path.isfile(filename):
+            model = FastTextWebTableModel(model=fastText.load_model(filename))
+        elif os.path.isdir(filename):
+            model = FastTextWebTableModel(
+                model=fastText.load_model(str(Path(filename).joinpath('weights.bin')))
+            )
+        else:
+            from huggingface_hub import hf_hub_download
+
+            filename = hf_hub_download(filename, 'weights.bin')
+            model = FastTextWebTableModel(model=fastText.load_model(filename))
         return model
 
     def train_fasttext_model(self, config, create_walks=True):
