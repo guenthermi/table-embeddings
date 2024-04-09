@@ -1,6 +1,6 @@
 # Pretrained Web Table Embeddings
 
-This repository contains tools for training Web table embedding with word embedding techniques.
+This repository contains tools for training and evaluating Web table embedding with word embedding techniques.
 Those models can generate embeddings for schema terms and instance data terms making them especially useful for representing schema and class information as well as for ML tasks on tabular text data.
 Furthermore, this repository contains links to pre-trained web table models and the code for several tasks the models can be used for.
 
@@ -9,6 +9,9 @@ Furthermore, this repository contains links to pre-trained web table models and 
 This repository provides tools for training four different types of Web table embedding models: *W-base*, *W-row*, *W-tax*, and *W-combo*.
 For pre-training those embedding models the [DWTC Web Table Corpus](https://wwwdb.inf.tu-dresden.de/misc/dwtc/]) can be used.
 All modules required to run the python scripts in this repository can be installed via pip.
+
+The training data used to be available on https://wwwdb.inf.tu-dresden.de/research-projects/dresden-web-table-corpus/
+sIf you need the training data contact the university with the contact information you can find on this website.
 
 #### Download DWTC Dump
 
@@ -58,10 +61,10 @@ Below you can find links to models trained on the DWTC corpus:
 
 | Model Type | Description | Download-Links |
 | ---------- | ----------- | -------------- |
-| W-tax      | Model of relations between table header and table body | ([64dim](https://wwwdb.inf.tu-dresden.de/misc/web-table-embeddings/web_table_embeddings_tax64.bin.gz), [150dim](https://wwwdb.inf.tu-dresden.de/misc/web-table-embeddings/web_table_embeddings_tax150.bin.gz))
-| W-row      | Model of row-wise relations in tables | ([64dim](https://wwwdb.inf.tu-dresden.de/misc/web-table-embeddings/web_table_embeddings_row64.bin.gz), [150dim](https://wwwdb.inf.tu-dresden.de/misc/web-table-embeddings/web_table_embeddings_row150.bin.gz))
-| W-combo      | Model of row-wise relations and relations between table header and table body | ([64dim](https://wwwdb.inf.tu-dresden.de/misc/web-table-embeddings/web_table_embeddings_combo64.bin.gz), [150dim](https://wwwdb.inf.tu-dresden.de/misc/web-table-embeddings/web_table_embeddings_combo150.bin.gz))
-| W-plain      | Model of row-wise relations in tables without pre-processing | ([64dim](https://wwwdb.inf.tu-dresden.de/misc/web-table-embeddings/web_table_embeddings_plain64.bin.gz), [150dim](https://wwwdb.inf.tu-dresden.de/misc/web-table-embeddings/web_table_embeddings_plain150.bin.gz))
+| W-tax      | Model of relations between table header and table body | ([64dim](https://huggingface.co/ddrg/web_table_embeddings_tax64), [150dim](https://huggingface.co/ddrg/web_table_embeddings_tax150))
+| W-row      | Model of row-wise relations in tables | ([64dim](https://huggingface.co/ddrg/web_table_embeddings_row64), [150dim](https://huggingface.co/ddrg/web_table_embeddings_row150))
+| W-combo      | Model of row-wise relations and relations between table header and table body | ([64dim](https://huggingface.co/ddrg/web_table_embeddings_combo64), [150dim](https://huggingface.co/ddrg/web_table_embeddings_combo150))
+| W-plain      | Model of row-wise relations in tables without pre-processing | ([64dim](https://huggingface.co/ddrg/web_table_embeddings_plain64), [150dim](https://huggingface.co/ddrg/web_table_embeddings_plain150))
 
 To use the models, you can use the `FastTextWebTableModel.load_model` function in `embedding/fasttext_web_table_embeddings.py`.
 
